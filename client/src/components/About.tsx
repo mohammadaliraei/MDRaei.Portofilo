@@ -69,7 +69,7 @@ const About: React.FC = () => {
         <div className=" text-black dark:text-white py-12">
           <h1 className="text-3xl font-bold py-4">Skills & Expertise.</h1>
           <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-6">
-            {data.map((n, idx) => (
+            {data.map((n) => (
               <div className="border border-grayColorLight dark:border-grayColorDark rounded-md h-52 p-4">
                 <div className="flex flex-col gap-6">
                   <div className="flex flex-row items-center gap-2">
@@ -77,7 +77,7 @@ const About: React.FC = () => {
                     <p className="text-[20px] font-bold">{n.name}</p>
                   </div>
                   <div className="grid md:grid-cols-3 grid-cols-2 gap-4">
-                    {n.skills.map((skill, idx) => (
+                    {n.skills.map((skill) => (
                       <div className="flex items-center dark:bg-grayColorLight bg-gray-200 h-10 px-2 py-1 rounded-md">
                         {skill}
                       </div>
