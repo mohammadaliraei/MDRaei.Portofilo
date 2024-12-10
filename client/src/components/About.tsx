@@ -48,45 +48,48 @@ const About: React.FC = () => {
   ];
 
   return (
-    <Container>
-      <div className="text-black dark:text-white py-12">
-        <h1 className="text-3xl font-bold py-4">About Me.</h1>
-        <div className="flex flex-col text-grayColorLight dark:text-grayColorDark gap-4">
-          <p>
-            I'm a full-stack developer with a passion for building beautiful,
-            functional, and user-friendly applications. With expertise in modern
-            web technologies, I strive to create impactful digital solutions.
-          </p>
-          <p>
-            When I'm not coding, you can find me exploring new technologies,
-            contributing to open-source projects, or sharing knowledge with the
-            developer community.
-          </p>
+    <div className="dark:bg-black bg-white">
+      <Container>
+        <div className="flex flex-col text-black dark:text-white py-12">
+          <h1 className="text-3xl font-bold py-4">About Me.</h1>
+          <div className="flex flex-col text-grayColorLight dark:text-grayColorDark gap-4">
+            <p>
+              I'm a full-stack developer with a passion for building beautiful,
+              functional, and user-friendly applications. With expertise in
+              modern web technologies, I strive to create impactful digital
+              solutions.
+            </p>
+            <p>
+              When I'm not coding, you can find me exploring new technologies,
+              contributing to open-source projects, or sharing knowledge with
+              the developer community.
+            </p>
+          </div>
         </div>
-      </div>
-      <div className="text-black dark:text-white py-12">
-        <h1 className="text-3xl font-bold py-4">Skills & Expertise.</h1>
-        <div className="grid grid-cols-3 gap-6">
-          {data.map((n, idx) => (
-            <div className="border border-grayColorLight dark:border-grayColorDark rounded-md h-40 p-4">
-              <div className="flex flex-col gap-6">
-                <div className="flex flex-row items-center gap-2">
-                  {n.icon}
-                  <p className="text-[20px] font-bold">{n.name}</p>
-                </div>
-                <div className="flex flex-row gap-4">
-                  {n.skills.map((skill, idx) => (
-                    <div className="border dark:border-white border-black px-2 py-1 rounded-md">
-                      {skill}
-                    </div>
-                  ))}
+        <div className=" text-black dark:text-white py-12">
+          <h1 className="text-3xl font-bold py-4">Skills & Expertise.</h1>
+          <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-6">
+            {data.map((n, idx) => (
+              <div className="border border-grayColorLight dark:border-grayColorDark rounded-md h-52 p-4">
+                <div className="flex flex-col gap-6">
+                  <div className="flex flex-row items-center gap-2">
+                    {n.icon}
+                    <p className="text-[20px] font-bold">{n.name}</p>
+                  </div>
+                  <div className="grid md:grid-cols-3 grid-cols-2 gap-4">
+                    {n.skills.map((skill, idx) => (
+                      <div className="flex items-center dark:bg-grayColorLight bg-gray-200 h-10 px-2 py-1 rounded-md">
+                        {skill}
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
-    </Container>
+      </Container>
+    </div>
   );
 };
 

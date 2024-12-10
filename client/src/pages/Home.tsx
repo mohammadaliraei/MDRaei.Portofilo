@@ -7,7 +7,7 @@ import Call from "../components/Call";
 
 const Home: React.FC = () => {
   return (
-    <div>
+    <div className="w-full h-screen dark:bg-black">
       <Navbar />
       <About />
       <Call />
