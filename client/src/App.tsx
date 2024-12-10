@@ -5,7 +5,7 @@ import { Route, Routes, BrowserRouter } from "react-router-dom";
 const App: React.FC = () => {
   return (
     <BrowserRouter>
-      <div className="bg-black w-full h-screen ">
+      <div className="bg-white dark:bg-black w-full h-screen ">
         <Routes>
           <Route
             element={<Home />}

@@ -1,5 +1,7 @@
-import logo from "../assets/MDRaei.logo.png";
+import logoWhite from "../assets/MDRaei.logo.White.png";
+import logoBlack from "../assets/MDRaei.logo.black.png";
 
 export const Images = {
-  Logo: logo,
+  LogoLightMode: logoWhite,
+  LogoDarkMode: logoBlack,
 };
