@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import { Container } from "./Container";
 import { IoPlanetOutline } from "react-icons/io5";
 import { FiServer } from "react-icons/fi";
