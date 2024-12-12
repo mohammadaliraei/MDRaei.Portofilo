@@ -9,7 +9,13 @@ dotenv.config();
 
 const app = express();
 app.use(express.json()); // For parsing application/json
-app.use(cors()); // Enable Cross-Origin Resource Sharing
+app.use(
+  cors({
+    origin: ["http://mdraei.ir", "http://localhost:3000"],
+    methods: ["POST", "GET"],
+    credentials: true,
+  })
+); // Enable Cross-Origin Resource Sharing
 
 // Get the MongoDB URL from environment variables
 const mongoURL = process.env.MONGOOSE_URL;

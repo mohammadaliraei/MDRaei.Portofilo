@@ -17,7 +17,10 @@ route.post("/post", (req, res) => {
       return res.status(400).send("name or email , message is empty");
     }
 
-    res.status(200).send("name: " + name);
+    const messageInfo = new messageModel({ name, email, message });
+    messageInfo.save();
+
+    res.status(200).send("save is successful");
   } catch (error) {
     res.status(400).send("error is: " + error);
   }
