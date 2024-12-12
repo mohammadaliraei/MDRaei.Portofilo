@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Container } from "./Container";
 import { IoPlanetOutline } from "react-icons/io5";
 import { FiServer } from "react-icons/fi";
@@ -48,7 +48,10 @@ const About: React.FC = () => {
   ];
 
   return (
-    <div className="dark:bg-black bg-white">
+    <div
+      className="dark:bg-black bg-white p-20"
+      id="aboutRef"
+    >
       <Container>
         <div className="flex flex-col text-black dark:text-white py-12">
           <h1 className="text-3xl font-bold py-4">About Me.</h1>
