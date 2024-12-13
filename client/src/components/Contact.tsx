@@ -91,27 +91,21 @@ const Call: React.FC = () => {
             Get In Touch.
           </h1>
           <div className="flex flex-col md:flex-row items-center justify-center gap-10">
-            <div className="flex flex-col gap-4">
+            <div className="flex md:flex-col flex-row w-full gap-4 justify-center">
               {/* Gmail box */}
-              <div className="flex flex-row items-center gap-4 p-4 border border-white rounded-md dark:bg-black bg-white">
-                <HiOutlineMail className="w-7 h-7" />
-                <div className="font-bold">
-                  <p>Email</p>
-                  <p className="dark:text-grayColorDark text-grayColorLight">
-                    mohammad.raei96@gmail.com
-                  </p>
-                </div>
-              </div>
+              <a
+                href="mailto:mohammad.raei96@gmail.com"
+                className="flex flex-row items-center justify-center gap-4 p-4 border border-white rounded-md dark:bg-black bg-white"
+              >
+                <HiOutlineMail className="w-10 h-10" />
+              </a>
               {/* Instagram box */}
-              <div className="flex flex-row items-center gap-4 p-4 border border-white rounded-md dark:bg-black bg-white">
-                <IoLogoInstagram className="w-7 h-7" />
-                <div className="font-bold">
-                  <p>Instagram</p>
-                  <p className="dark:text-grayColorDark text-grayColorLight">
-                    @mdraei
-                  </p>
-                </div>
-              </div>
+              <a
+                href="https://www.instagram.com/mdraei/profilecard/?igsh=NGM3bnI3bGd5eWxn"
+                className="flex flex-row items-center gap-4 p-4 justify-center border border-white rounded-md dark:bg-black bg-white"
+              >
+                <IoLogoInstagram className="w-10 h-10" />
+              </a>
             </div>
 
             <div className="flex flex-col gap-6 dark:bg-black bg-white border border-white rounded-md p-4 w-[400px]">
