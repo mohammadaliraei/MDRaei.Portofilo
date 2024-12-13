@@ -1,26 +1,26 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const dotenv = require("dotenv"); // No need for assignment here
+const dotenv = require("dotenv");
 const cors = require("cors");
+const https = require("https");
+const fs = require("fs");
 const messageRoute = require("./routes/MessageRoute");
 
-// Initialize dotenv to load environment variables from .env file
+// Load environment variables
 dotenv.config();
 
 const app = express();
-app.use(express.json()); // For parsing application/json
+app.use(express.json());
 app.use(
   cors({
     origin: ["http://mdraei.ir", "http://localhost:3000"],
     methods: ["POST", "GET"],
     credentials: true,
   })
-); // Enable Cross-Origin Resource Sharing
+);
 
-// Get the MongoDB URL from environment variables
+// Get environment variables
 const mongoURL = process.env.MONGOOSE_URL;
-
-// Get the port from environment variables or default to 3000
 const port = process.env.PORT || 3000;
 
 // Connect to MongoDB
@@ -32,7 +32,24 @@ mongoose
 // Use the messageRoute for /message endpoint
 app.use("/message", messageRoute);
 
-// Start the server
-app.listen(port, () => {
-  console.log(`Server is running on port: ${port}`);
+// Load SSL certificate and key
+const httpsOptions = {
+  key: fs.readFileSync("/etc/letsencrypt/live/mdraei.ir/privkey.pem"),
+  cert: fs.readFileSync("/etc/letsencrypt/live/mdraei.ir/fullchain.pem"),
+};
+
+// Start HTTPS server
+https.createServer(httpsOptions, app).listen(443, () => {
+  console.log("HTTPS server is running on port 443");
 });
+
+// Optionally start an HTTP server to redirect to HTTPS
+const http = require("http");
+http
+  .createServer((req, res) => {
+    res.writeHead(301, { Location: `https://${req.headers.host}${req.url}` });
+    res.end();
+  })
+  .listen(80, () => {
+    console.log("HTTP server is redirecting to HTTPS on port 80");
+  });
