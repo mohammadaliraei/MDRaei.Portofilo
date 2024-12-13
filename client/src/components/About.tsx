@@ -49,7 +49,7 @@ const About: React.FC = () => {
 
   return (
     <div
-      className="dark:bg-black bg-white md:p-20 px-10"
+      className="dark:bg-black bg-white md:p-20 pt-16 px-10"
       id="aboutRef"
     >
       <Container>
