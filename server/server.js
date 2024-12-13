@@ -11,7 +11,7 @@ const app = express();
 app.use(express.json()); // For parsing application/json
 app.use(
   cors({
-    origin: ["http://mdraei.ir", "http://localhost:3000"],
+    origin: ["https://mdraei.ir", "http://localhost:3000"],
     methods: ["POST", "GET"],
     credentials: true,
   })

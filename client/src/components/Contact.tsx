@@ -35,7 +35,7 @@ const Call: React.FC = () => {
     setLoading(true);
 
     try {
-      const response = await axios.post("http://mdraei.ir/message/post", {
+      const response = await axios.post("https://mdraei.ir/message/post", {
         name: isInputs.name,
         email: isInputs.email,
         message: isInputs.message,
