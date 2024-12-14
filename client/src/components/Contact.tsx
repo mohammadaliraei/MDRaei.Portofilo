@@ -96,6 +96,7 @@ const Call: React.FC = () => {
               {/* Gmail box */}
               <a
                 href="mailto:mohammad.raei96@gmail.com"
+                target="_blank"
                 className="flex flex-row items-center justify-center gap-4 p-4 border border-white rounded-md dark:bg-black bg-white"
               >
                 <HiOutlineMail className="w-10 h-10" />
@@ -103,12 +104,14 @@ const Call: React.FC = () => {
               {/* Instagram box */}
               <a
                 href="https://www.instagram.com/mdraei/profilecard/?igsh=NGM3bnI3bGd5eWxn"
+                target="_blank"
                 className="flex flex-row items-center gap-4 p-4 justify-center border border-white rounded-md dark:bg-black bg-white"
               >
                 <IoLogoInstagram className="w-10 h-10" />
               </a>
               <a
                 href="https://github.com/mohammadaliraei"
+                target="_blank"
                 className="flex flex-row items-center gap-4 p-4 justify-center border border-white rounded-md dark:bg-black bg-white"
               >
                 <IoLogoGithub className="w-10 h-10" />
