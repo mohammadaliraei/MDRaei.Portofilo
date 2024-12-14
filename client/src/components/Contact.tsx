@@ -2,6 +2,7 @@ import React, { ChangeEvent, useState } from "react";
 import { Container } from "./Container";
 import { HiOutlineMail } from "react-icons/hi";
 import { IoLogoInstagram } from "react-icons/io5";
+import { IoLogoGithub } from "react-icons/io";
 import axios from "axios";
 
 //toast
@@ -105,6 +106,12 @@ const Call: React.FC = () => {
                 className="flex flex-row items-center gap-4 p-4 justify-center border border-white rounded-md dark:bg-black bg-white"
               >
                 <IoLogoInstagram className="w-10 h-10" />
+              </a>
+              <a
+                href="https://github.com/mohammadaliraei"
+                className="flex flex-row items-center gap-4 p-4 justify-center border border-white rounded-md dark:bg-black bg-white"
+              >
+                <IoLogoGithub className="w-10 h-10" />
               </a>
             </div>
 
