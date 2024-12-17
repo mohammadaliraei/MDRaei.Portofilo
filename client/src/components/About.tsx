@@ -28,7 +28,7 @@ const About: React.FC = () => {
     {
       name: "Database",
       icon: <IoServerOutline className="w-6 h-6" />,
-      skills: ["MongoDB", "Prisma", "SQL"],
+      skills: ["MongoDB", "PostgreSQL", "Prisma", "SQL"],
     },
     {
       name: "DevOps",
